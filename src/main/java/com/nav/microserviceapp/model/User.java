@@ -8,7 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class Employee {
+public class User {
     private String name;
     private String designation;
     private Long salary;

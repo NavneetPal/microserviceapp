@@ -1,6 +1,6 @@
 package com.nav.microserviceapp.controller;
 
-import com.nav.microserviceapp.model.Employee;
+import com.nav.microserviceapp.model.User;
 import com.nav.microserviceapp.service.MicroServiceAppService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,10 +19,10 @@ public class MicroServiceAppController {
 
     private final MicroServiceAppService microServiceAppService;
 
-    @GetMapping("/getEmployeeData")
-    public ResponseEntity<List<Employee>> fetchEmployeeData(){
+    @GetMapping("/getUserData")
+    public ResponseEntity<List<User>> fetchEmployeeData(){
         log.info("The request to fetch employee data started");
-        ResponseEntity<List<Employee>> employeeList = microServiceAppService.fetchData();
+        ResponseEntity<List<User>> employeeList = microServiceAppService.fetchData();
         log.info("The employee data fetched successfully");
         return employeeList;
     }
